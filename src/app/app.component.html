@@ -4,7 +4,7 @@
   }
 </style>
 
-<!-- Toolbar -->
-<div>
-  <h1 class="test">Test</h1>
-</div>
+<h1>{{ title }}</h1>
+<button (click)="counter('minus')">--</button>
+<p>Count : {{ count }}</p>
+<button (click)="counter('add')">++</button>

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'desktop-angular';
+  title = 'Desktop Angular';
+  count=0;
+  counter(type:string){
+    type==='add'?this.count++:this.count--
+  }
 }
