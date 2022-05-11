@@ -16,6 +16,11 @@ export class AppComponent {
 
   selectedEmployee: Employee = new Employee();
 
+  addOrEdit(){
+    this.selectedEmployee.id = this.employeeArray.length +1;
+    this.employeeArray.push(this.selectedEmployee)
+  }
+
 
 
   title = 'Desktop Angular';
