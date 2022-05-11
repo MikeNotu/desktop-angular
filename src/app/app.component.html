@@ -16,6 +16,8 @@
         <li
           *ngFor="let employee of employeeArray"
           class="list-group-item list-group-item-action"
+          (click)="openForEdit(employee)"
+          [class.active]="employee == selectedEmployee"
         >
           <span class="badge alert-primary">{{ employee.id }}</span>
           {{ employee.name }} - {{ employee.country }}
