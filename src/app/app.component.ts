@@ -29,6 +29,15 @@ export class AppComponent {
     this.selectedEmployee = new Employee();
   }
 
+  delete(){
+
+    if(confirm("Are you sure you want to delete it?")){
+
+    this.employeeArray = this.employeeArray.filter(x=>x!=this.selectedEmployee);
+    this.selectedEmployee = new Employee();
+  }
+  }
+
 
 
   title = 'Desktop Angular';
