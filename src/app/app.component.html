@@ -5,10 +5,46 @@
 </style>
 
 <nav class="navbar navbar-dark bg-primary">
+  <h1 class="test">{{ title }}</h1>
   <a class="navbar-brand" href="/">Angular Simple CRUD</a>
 </nav>
 
-<h1 class="test">{{ title }}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li
+          *ngFor="let employee of employeeArray"
+          class="list-group-item list-group-item-action"
+        >
+          <span class="badge alert-primary">{{ employee.id }}</span>
+          {{ employee.name }} - {{ employee.country }}
+        </li>
+      </ul>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">Insert A new Employee</div>
+          <div class="form-group">
+            <input
+              type="text"
+              [(ngModel)]="selectedEmployee.name"
+              placeholder="Insert A Name"
+              class="form-control"
+            />
+            <input
+              type="text"
+              [(ngModel)]="selectedEmployee.country"
+              placeholder="Insert A Country"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
 <button (click)="counter('minus')">--</button>
 <p>Count : {{ count }}</p>
 <button (click)="counter('add')">++</button>
